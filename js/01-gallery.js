@@ -23,7 +23,7 @@ const createImageGallery = (images) =>
 
 imageGallery.insertAdjacentHTML(`afterbegin`, createImageGallery(galleryItems));
 
-imageGallery.addEventListener(`clock`, onImageClick);
+imageGallery.addEventListener(`click`, onImageClick);
 
 function onImageClick(evt) {
   evt.preventDefault();
@@ -32,7 +32,7 @@ function onImageClick(evt) {
   }
 
   const instance = basicLightbox.create(
-    `<img src="${evt.target.dataset.source}" alt = "${evt.target.description}"/>`
+    `<img src="${evt.target.dataset.source}"  alt="${evt.target.description}"/>`
   );
 
   instance.show();
